@@ -1,0 +1,13 @@
+{
+  "name": "bookmark-landing-page",
+  "version": "1.0.0",
+  "description": "A Frontendmentor.io challenge",
+  "scripts": {
+    "build-css": "tailwindcss -i src/styles.css -o public/styles.css --watch"
+  },
+  "author": "Maryam Saleh",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.4.7"
+  }
+}

@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Rubio" sans-serif;
+  }
+}
+
+:root {
+  --sides-padding-desktop: 4rem;
+  --side-padding-mobile: 2rem;
+  --image-width-desktop: 100%;
+  --image-width-mobile: calc(100vw - 2 * var(--side-padding-mobile));
+}
+
+.btn {
+  @apply px-5 py-3 rounded x-sm-3:text-base text-sm;
+}
+
+.btn-login {
+  @apply bg-primary_red px-6 py-2 rounded-md text-white hover:bg-white border-2 border-primary_red hover:text-primary_red hover:border-primary_red hover:cursor-pointer uppercase tracking-widest text-sm shadow-md;
+}
+
+.btn-login-mobile {
+  @apply bg-none text-center text-base px-6 py-2 rounded-md text-white  border-2 border-white  uppercase tracking-widest  shadow-md;
+}
+
+.cta-main {
+  @apply bg-primary_blue text-white hover:bg-white hover:text-primary_blue border-2 border-solid border-primary_blue shadow-md;
+}
+
+.cta-secondry {
+  @apply bg-gray-200 hover:bg-white hover:text-dark_blue border-2 border-solid hover:border-dark_blue border-gray-200 shadow-md;
+}
+
+.img-container-right {
+  @apply relative order-2 pr-mobile md:pr-desktop  before:h-4/5 before:w-3/5 md-1:before:w-4/5 before:bg-primary_blue before:absolute before:top-14 before:lg:top-24 before:z-0 before:right-0 md:basis-1/2 before:rounded-l-full;
+}
+
+.img-container-left {
+  @apply relative pr-mobile md:pr-desktop  before:h-4/5 before:w-3/5 md-1:before:w-4/5 before:bg-primary_blue before:absolute before:top-14 before:lg:top-24 before:z-0 before:left-0 md:basis-1/2 before:rounded-r-full;
+}
+
+.title {
+  @apply font-medium md-3:text-4xl text-2xl text-dark_blue;
+}
+
+.sub-title {
+  @apply font-medium text-lg text-dark_blue mt-4;
+}
+
+.body-text {
+  @apply text-grayish_blue  md-3:mt-6 mt-4;
+}
+
+.card-text {
+  @apply text-grayish_blue mt-2 text-sm;
+}
+
+.nav-item {
+  @apply text-base font-medium x-sm-1:border-none border-b-2 border-gray-100 basis-full py-3 x-sm-1:pb-5;
+}
+
+.active-item {
+  @apply text-dark_blue border-solid border-b-2 border-primary_red;
+}
+
+.inactive-item {
+  @apply text-grayish_blue hover:text-primary_red hover:cursor-pointer;
+}
+
+.card {
+  @apply flex flex-col justify-center items-center shadow-xl rounded-md pb-8;
+}
+
+.q-body {
+  @apply text-gray-600 text-sm mt-6 leading-8;
+}
+
+.expanded-q-icon {
+  @apply transform rotate-180 stroke-primary_red;
+}
+
+.collapsed-q-icon {
+  @apply stroke-primary_blue hover:text-primary_red;
+}
+
+.collapsed-q {
+  @apply hover:text-primary_red hover:cursor-pointer;
+}
+
+.form-input {
+  @apply relative rounded px-4 h-12 w-80 text-dark_blue outline-none;
+}
+
+.form-input-error {
+  @apply border-2 border-solid border-primary_red;
+}
+
+.form-input-wrapper {
+  @apply relative before:absolute before:h-20 before:w-full before:bg-primary_red before:rounded before:top-0 rounded before:content-[attr(before)] before:pt-14 before:text-xs before:pl-4 before:italic;
+}
+
+.success-message {
+  @apply absolute text-sm mt-4 font-normal text-gray-100;
+}
+
+.contact-btn {
+  @apply btn bg-primary_red border-2 hover:border-solid hover:bg-white border-primary_red hover:cursor-pointer hover:border-2 hover:text-primary_red;
+}
+
+.footer-nav-item {
+  @apply hover:text-primary_red hover:cursor-pointer;
+}
+
+.footer-social-icon {
+  @apply hover:fill-primary_red hover:cursor-pointer;
+}
+
+.menu-bar {
+  @apply relative bg-dark_blue w-full h-1 before:top-3 before:h-1 before:w-full before:bg-dark_blue before:content-[''] before:absolute after:-top-3 after:h-1 after:w-full after:bg-dark_blue after:content-[''] after:absolute z-20;
+}
+
+.menu-bar-rotate {
+  @apply h-0;
+}
+
+.menu-bar-rotate::before {
+  @apply transform rotate-45 transition-transform duration-300 -translate-y-3 bg-white;
+}
+
+.menu-bar-rotate::after {
+  @apply transform -rotate-45 transition-transform duration-300 translate-y-3 bg-white;
+}
+
+.mobile-menu {
+  @apply fixed top-0 left-0 w-svw h-svh opacity-90 bg-dark_blue z-10 transition-transform duration-300 origin-top-right;
+}
+
+.features-nav {
+  @apply px-mobile x-sm-1:flex grid grid-cols-1 x-sm-1:items-center x-sm-1:flex-row x-sm-1:gap-8 justify-center x-sm-1:border-b-2 border-gray-100 pb-0 xl-1:mx-72 lg-1:mx-48;
+}
+
+.hero-text-container {
+  @apply order-2 px-mobile md-2:pl-desktop md:basis-1/2 flex flex-col justify-center items-center md-2:items-start gap-2;
+}
+
+.hero-title {
+  @apply text-center x-sm-3:text-left text-2xl md-3:text-4xl font-bold leading-[2rem] x-sm-3:leading-[3.5rem] md-3:mb-6 mb-4 text-dark_blue mt-5 md-2:mt-20 lg-1:text-5xl;
+}
+
+.features-img-container {
+  @apply basis-1/2 img-container-left  before:lg-1:top-36 self-start before:w-9/12;
+}
+
+.features-text-container {
+  @apply basis-1/2 mt-12 md-1:ml-24 flex flex-col items-center md-1:items-start px-mobile;
+}
+
+.footer {
+  @apply sm:col-span-2 bg-dark_blue text-grayish_blue flex flex-col gap-4 md-0:flex-row justify-between px-desktop py-5 tracking-widest;
+}
